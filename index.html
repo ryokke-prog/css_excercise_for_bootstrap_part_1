@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>レスポンシブイメージギャラリー with Bootstrap</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <!--
     やること:
       - CDN経由でBootstrapのCSSファイルを読み込む
@@ -10,6 +11,7 @@
     参考:
       - https://tsuyopon.xyz/learning-contents/web-dev/css/how-to-use-the-bootstrap-css/
   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,24 +33,24 @@
     参考:
       - https://tsuyopon.xyz/learning-contents/web-dev/css/how-to-use-navbar-in-the-bootstrap-css/
   -->
-  <nav>
-    <a href="#">マイアルバム</a>
-    <button>
-      <span></span>
+  <nav class="navbar navbar-dark bg-danger navbar-expand-sm">
+    <a href="#" class="navbar-brand">マイアルバム</a>
+    <button data-target="#navbarNav" class="navbar-toggler" data-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div>
-      <ul>
-        <li>
-          <a href="#">最新</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="active nav-item">
+          <a class="nav-link" href="#">最新</a>
         </li>
-        <li>
-          <a href="#">日常</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">日常</a>
         </li>
-        <li>
-          <a href="#">動物</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">動物</a>
         </li>
-        <li>
-          <a href="#">風景(準備中)</a>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">風景(準備中)</a>
         </li>
       </ul>
     </div>
@@ -73,40 +75,40 @@
       - https://tsuyopon.xyz/learning-contents/web-dev/css/how-to-use-grid-system-in-the-bootstrap-css-part-1/
       - https://tsuyopon.xyz/learning-contents/web-dev/css/how-to-use-grid-system-in-the-bootstrap-css-part-2/
   -->
-  <div class="img-gallery">
-    <div>
-      <div>
-        <div>
+  <div class="img-gallery container">
+    <div class="row">
+      <div class="mb-4 col-sm-6 col-md-4 col-lg-3">
+        <div class="img-thumbnail">
           <img src="https://www.pakutaso.com/shared/img/thumb/TOMheuaDSC01992_TP_V1.jpg">
           <p class="img-title">ヘウーッ（猫）</p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class="mb-4 col-sm-6 col-md-4 col-lg-3">
+        <div class="img-thumbnail">
           <img src="https://www.pakutaso.com/shared/img/thumb/TOMnemuiDSC01757_TP_V1.jpg">
           <p class="img-title">今日も一日頑張ったにゃん</p>
         </div>
       </div>
-      <div>
+      <div class="mb-4 col-sm-6 col-md-4 col-lg-3">
         <div class="img-thumbnail">
           <img src="https://www.pakutaso.com/shared/img/thumb/TOMcatDSC02022_TP_V1.jpg">
           <p class="img-title">何か用ですか？（猫）</p>
         </div>
       </div>
-      <div>
+      <div class="mb-4 col-sm-6 col-md-4 col-lg-3">
         <div class="img-thumbnail">
           <img src="https://www.pakutaso.com/shared/img/thumb/TOMcatDSC02346_TP_V1.jpg">
           <p class="img-title">怖がる猫</p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class="mb-4 col-sm-6 col-md-4 col-lg-3">
+        <div class="img-thumbnail">
           <img src="https://www.pakutaso.com/shared/img/thumb/TOMcatDSC01994_TP_V1.jpg">
           <p class="img-title">猫の怒りのサイン</p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class="mb-4 col-sm-6 col-md-4 col-lg-3">
+        <div class="img-thumbnail">
           <img src="https://www.pakutaso.com/shared/img/thumb/TOMcatDSC01938_TP_V1.jpg">
           <p class="img-title">隠れるにゃんこ</p>
         </div>
@@ -122,5 +124,7 @@
     参考:
       - https://tsuyopon.xyz/learning-contents/web-dev/css/how-to-use-the-bootstrap-css/
   -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
